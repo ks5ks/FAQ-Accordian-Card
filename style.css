@@ -1,5 +1,5 @@
 :root {
-  --minDesktopWidth: 750px; /* DESKTOP MIN WIDTH */
+  --minDesktopWidth: 850px; /* DESKTOP MIN WIDTH */
   --minWidth: 23.475rem; /* MOBILE MIN WIDTH */
   /****
 
@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   background-image: linear-gradient(var(--gradient-start), var(--gradient-end));
   font-family: "Kumbh Sans";
@@ -50,33 +50,46 @@ hr {
   min-width: var(--minWidth);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 1rem 1rem 7rem 1rem;
+  margin: 0 1rem 7rem 1rem;
 }
 
 @media screen and (min-width: 750px) {
   .container {
-    min-width: 100%;
     flex-direction: row;
     margin: auto;
   }
 }
 
 .image-block {
-  align-items: center;
   z-index: 2;
-  margin-top: 2rem;
-  text-align: center;
+  /* margin-top: 2rem; */
+  width: 80%;
+  height: 15rem;
+  position: relative;
 }
 
-.primary-image {
-  border-radius: 0;
+.image {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.background-image {
-  margin-top: -5rem;
-  margin-left: 0rem;
+.bg-image {
+  position: absolute;
+  width: 80%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+@media screen and (min-width: 750px) {
+  .background-image {
+    margin-top: 0;
+  }
 }
 
 .faq {
