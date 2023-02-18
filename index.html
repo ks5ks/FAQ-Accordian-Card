@@ -21,18 +21,27 @@
   <body>
     <main class="container">
       <div class="image-block">
-        <img
-          src="./images/illustration-woman-online-mobile.svg"
-          alt="illustration of woman working"
-          class="image"
-        />
+        <picture>
+          <source media="(min-width: 375)"
+          srcset-"./images/illustration-woman-online-mobile.svg" > <source
+          media="(min-width: 850)"
+          srcset-"./images/illustration-woman-online-desktop.svg" >
+          <img
+            src="./images/illustration-woman-online-mobile.svg"
+            alt="illustration of woman working"
+            class="image"
+          />
+        </picture>
 
-        <img
-          src="./images/bg-pattern-mobile.svg"
-          alt="shadow
+        <picture>
+          <source media="(min-width: 375)"
+          srcset-"./images/bg-pattern-mobile.svg" > <source media="(min-width:
+          850)" srcset-"./images/bg-pattern-desktop.svg" ><img
+            src="./images/bg-pattern-mobile.svg"
+            alt="shadow
             pattern under woman working"
-          class="bg-image"
-        />
+            class="bg-image"
+        /></picture>
       </div>
 
       <div class="faq">
