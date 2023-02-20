@@ -47,15 +47,6 @@ hr {
   margin: 0 1rem 7rem 1rem;
 }
 
-@media screen and (min-width: 850px) {
-  .container {
-    min-width: var(--minDesktopWidth, 850px);
-    flex-direction: row;
-    justify-items: center;
-    margin: 0rem 1rem 7rem 1rem;
-  }
-}
-
 .image-block {
   z-index: 2;
   width: 80%;
@@ -86,18 +77,6 @@ hr {
   left: 50%;
   transform: translate(-50%, 30%);
 }
-@media screen and (min-width: 850px) {
-  .image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .bg-image {
-    width: 70%;
-    height: 55%;
-    transform: translate(-50%, 30%);
-  }
-}
 
 .faq {
   background-color: #ffffff;
@@ -108,20 +87,39 @@ hr {
   z-index: 0;
   width: calc(var(--minWidth) - 2rem);
 }
-@media screen and (min-width: 850px) {
-  .faq {
-    margin: 0rem 5rem 0 -20rem;
-    padding: 0rem 1rem 2rem 22rem;
-    width: calc(var(--minDesktopWidth) - 2rem);
-  }
-}
+
 .faq-header {
   text-align: center;
   color: var(--text-darkBlue);
   font-weight: 700;
   letter-spacing: 1px;
 }
+
 @media screen and (min-width: 850px) {
+  .container {
+    min-width: var(--minDesktopWidth, 850px);
+    flex-direction: row;
+    justify-items: center;
+    margin: 0rem 1rem 7rem 1rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg-image {
+    width: 70%;
+    height: 55%;
+    transform: translate(-50%, 30%);
+  }
+
+  .faq {
+    margin: 0rem 5rem 0 -20rem;
+    padding: 0rem 1rem 2rem 22rem;
+    width: calc(var(--minDesktopWidth) - 2rem);
+  }
+
   .faq-header {
     margin: 2rem 0rem 0rem 0.9rem;
     text-align: left;
@@ -137,20 +135,22 @@ hr {
 details {
   margin: 0.75rem;
   color: var(--text-veryDark);
+  padding: 10px;
 }
 
-details > summary {
+details summary {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   color: var(--text-veryDark);
-  transition: all 0.5s;
+  transition: margin 150ms ease-out;
 }
 
 details[open] summary {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-darkBlue);
+  margin-bottom: 10px;
 }
 
 details[open] .arrow {
@@ -162,7 +162,6 @@ details[open] > .answer {
   margin: 0.75rem 1.5rem 1rem 0;
   color: var(--text-dark);
   line-height: 1.4;
-  transition: all 0.5s;
 }
 
 .attribution {
