@@ -33,14 +33,14 @@ body {
 }
 
 hr {
-  background-color: var(--divider);
+  background-color: var(--divider, hsl(240, 5%, 91%));
   height: 1px;
   border: 0;
   margin: 0 1rem 0 1rem;
 }
 
 .container {
-  min-width: var(--minWidth);
+  min-width: var(--minWidth, 23.475rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,12 +53,6 @@ hr {
   height: 15rem;
   position: relative;
 }
-/* @media screen and (min-width: 850px) {
-  .image-block {
-    padding: 3rem 0rem 3rem 0rem;
-    margin: 3rem 0rem 3rem 0rem;
-  }
-} */
 
 .image {
   position: absolute;
@@ -85,19 +79,19 @@ hr {
   margin: -6.5rem 1rem 0 1rem;
   padding: 8rem 01rem 4rem 01rem;
   z-index: 0;
-  width: calc(var(--minWidth) - 2rem);
+  width: calc(var(--minWidth, 23.475rem) - 2rem);
 }
 
 .faq-header {
   text-align: center;
-  color: var(--text-darkBlue);
+  color: var(--text-darkBlue, hsl(238, 29%, 16%));
   font-weight: 700;
   letter-spacing: 1px;
 }
 
 @media screen and (min-width: 850px) {
   .container {
-    min-width: var(--minDesktopWidth, 850px);
+    min-width: var(--minDesktopWidth, 53.125rem);
     flex-direction: row;
     justify-items: center;
     margin: 0rem 1rem 7rem 1rem;
@@ -117,7 +111,7 @@ hr {
   .faq {
     margin: 0rem 5rem 0 -20rem;
     padding: 0rem 1rem 2rem 22rem;
-    width: calc(var(--minDesktopWidth) - 2rem);
+    width: calc(var(--minDesktopWidth, 53.125rem) - 2rem);
   }
 
   .faq-header {
@@ -134,7 +128,7 @@ hr {
 
 details {
   margin: 0.75rem;
-  color: var(--text-veryDark);
+  color: var(--text-veryDark, hsl(237, 12%, 33%));
   padding: 10px;
 }
 
@@ -142,14 +136,14 @@ details summary {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  color: var(--text-veryDark);
+  color: var(--text-veryDark, hsl(237, 12%, 33%));
   transition: margin 150ms ease-out;
 }
 
 details[open] summary {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--text-darkBlue);
+  color: var(--text-darkBlue, hsl(238, 29%, 16%));
   margin-bottom: 10px;
 }
 
@@ -160,7 +154,7 @@ details[open] .arrow {
 
 details[open] > .answer {
   margin: 0.75rem 1.5rem 1rem 0;
-  color: var(--text-dark);
+  color: var(--text-dark, hsl(240, 6%, 50%));
   line-height: 1.4;
 }
 
