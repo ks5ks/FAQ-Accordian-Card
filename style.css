@@ -129,7 +129,6 @@ hr {
 details {
   margin: 0.75rem;
   color: var(--text-veryDark, hsl(237, 12%, 33%));
-  padding: 10px;
 }
 
 details summary {
@@ -137,14 +136,13 @@ details summary {
   display: flex;
   justify-content: space-between;
   color: var(--text-veryDark, hsl(237, 12%, 33%));
-  transition: margin 150ms ease-out;
+  transition: margin 1s ease-out;
 }
 
 details[open] summary {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-darkBlue, hsl(238, 29%, 16%));
-  margin-bottom: 10px;
 }
 
 details[open] .arrow {
